@@ -27,17 +27,7 @@
     {
       "entityId": "com.test.msteamsbotsampleapp.hellotab",
       "name": "Hello Tab",
-      "contentUrl": "https://microsoftteamssampleshelloworldweb20220617082312.azurewebsites.net/hello",
-      "scopes": [
-        "personal"
-      ]
-    }
-  ],
-  "bots": [
-    {
-      "botId": "00000000-0000-0000-0000-000000000000",
-      "needsChannelSelector": false,
-      "isNotificationOnly": false,
+      "contentUrl": "https://msteamsbotsampleweb.azurewebsites.net/hello",
       "scopes": [
         "personal"
       ]
