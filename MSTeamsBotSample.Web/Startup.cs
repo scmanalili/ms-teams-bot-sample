@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System.Collections.Concurrent;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Integration.AspNet.Core;
+using Microsoft.Bot.Schema;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,7 +26,8 @@ namespace MSTeamsBotSample.Web
             services.AddMvc();
 
             services.AddSingleton<IBotFrameworkHttpAdapter, AdapterWithErrorHandler>();
-            services.AddTransient<IBot, NotificationBot>();
+            services.AddSingleton<ConcurrentDictionary<string, ConversationReference>>();
+            services.AddTransient<IBot, NotifyBot>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
