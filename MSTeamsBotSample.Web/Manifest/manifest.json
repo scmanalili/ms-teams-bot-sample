@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.13",
+  "version": "1.0.0",
+  "id": "90a1a9d1-d35b-46ed-9ea6-279116cf39ad",
+  "packageName": "com.test.msteamsbotsampleapp",
+  "developer": {
+    "name": "Test Company",
+    "websiteUrl": "https://www.microsoft.com",
+    "privacyUrl": "https://www.microsoft.com/privacy",
+    "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
+  },
+  "name": {
+    "short": "MS Teams Bot Sample App",
+    "full": "MS Teams Bot Sample App"
+  },
+  "description": {
+    "short": "MS Teams Bot Sample App",
+    "full": "This sample app sends a proactive message to users."
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#60A18E",
+  "staticTabs": [
+    {
+      "entityId": "com.test.msteamsbotsampleapp.hellotab",
+      "name": "Hello Tab",
+      "contentUrl": "https://microsoftteamssampleshelloworldweb20220617082312.azurewebsites.net/hello",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "bots": [
+    {
+      "botId": "00000000-0000-0000-0000-000000000000",
+      "needsChannelSelector": false,
+      "isNotificationOnly": false,
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "permissions": [],
+  "validDomains": []
+}
